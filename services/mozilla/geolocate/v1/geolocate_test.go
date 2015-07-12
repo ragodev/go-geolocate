@@ -5,7 +5,6 @@ import "testing"
 const TestApiKey = "test"
 
 func TestGetCurrentLocation(t *testing.T) {
-
 	greq := NewGeoRequest(TestApiKey)
 	greq.HomeMobileCountryCode = 310
 	greq.HomeMobileNetworkCode = 410
@@ -14,7 +13,6 @@ func TestGetCurrentLocation(t *testing.T) {
 	greq.CellTowers = []CellTower{
 		// GSM
 		CellTower{
-
 			CellId:            42,
 			LocationAreaCode:  415,
 			MobileCountryCode: 310,
@@ -25,7 +23,6 @@ func TestGetCurrentLocation(t *testing.T) {
 		},
 		// WCDMA
 		CellTower{
-
 			CellId:            21532831,
 			LocationAreaCode:  2862,
 			MobileCountryCode: 214,
@@ -34,7 +31,6 @@ func TestGetCurrentLocation(t *testing.T) {
 	}
 	greq.WifiAccessPoints = []WifiAccessPoint{
 		WifiAccessPoint{
-
 			MacAddress:         "01:23:45:67:89:AB",
 			SignalStrength:     -65,
 			Age:                0,
@@ -42,7 +38,6 @@ func TestGetCurrentLocation(t *testing.T) {
 			SignalToNoiseRatio: 40,
 		},
 		WifiAccessPoint{
-
 			MacAddress:     "01:23:45:67:89:AC",
 			SignalStrength: 4,
 			Age:            0,
@@ -51,7 +46,6 @@ func TestGetCurrentLocation(t *testing.T) {
 
 	gresp, err := greq.GetCurrentLocation()
 	if err != nil {
-
 		t.Fatal(err)
 	}
 

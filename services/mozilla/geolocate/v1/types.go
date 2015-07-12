@@ -1,7 +1,6 @@
 package geolocate
 
 type GeoRequest struct {
-
 	// Internal stuff not sent to mozilla location services
 	apiKey string `json:"-"`
 
@@ -25,7 +24,6 @@ type GeoRequest struct {
 }
 
 type CellTower struct {
-
 	// Unique identifier of the cell.
 	CellId int `json:"cellId"`
 
@@ -49,7 +47,6 @@ type CellTower struct {
 }
 
 type WifiAccessPoint struct {
-
 	// The MAC address of the WiFi node.
 	MacAddress string `json:"macAddress"`
 
@@ -67,7 +64,6 @@ type WifiAccessPoint struct {
 }
 
 type GeoResponse struct {
-
 	// The user’s estimated latitude and longitude, in degrees.
 	Location Location `json:"location"`
 
